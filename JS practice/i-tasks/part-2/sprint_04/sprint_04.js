@@ -211,8 +211,11 @@ const out10 = document.querySelector('.out-10');
 
 const t10 = () => {
     let str = '';
-
-    out10.textContent = str;
+    for (let i = 0; i < 6; i++) {
+        str += `${5 - i} `;
+        str += `${i} `;
+    }
+    out10.textContent = str.trim();
 };
 
 document.querySelector('.b-10').addEventListener('click', t10);
@@ -242,9 +245,20 @@ document.querySelector('.b-11').addEventListener('click', t11);
 // Task 12
 // Функция должна рисовать такую фигуру
 // и выводить в .out-12
+const out12 = document.querySelector('.out-12');
 
 const t12 = () => {
-
+    let str = '';
+    for (let i = 1; i <= 4; i++) {
+        for (let k = 0; k < i; k++) {
+            str += '* ';
+        }
+        for (let f = 3; f >= i; f--) {
+            str += '_ '
+        }
+        str += '</br>';
+    }
+    out12.innerHTML = str;
 };
 
 document.querySelector('.b-12').addEventListener('click', t12);

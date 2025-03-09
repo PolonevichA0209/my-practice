@@ -187,11 +187,16 @@ document.querySelector('.b-11').addEventListener('click', () => {
 // Task 12
 // Функция должна с помощью forEach наполнить массив res_12 индексами четных элементов из массива arr_12. Обратите внимание!!! Функция должна выдавать одинаковый результат при любом количестве запусков.
 
-let arr_12 = [10, 20, 30, 40];
+let arr_12 = [10, 1, 30, 40, 33];
 let res_12 = [];
 
 const t12 = () => {
-
+    res_12 = [];
+    arr_12.forEach((elem, i) => {
+        if (elem % 2 === 0) {
+            res_12.push(i);
+        }
+    })
 };
 
 document.querySelector('.b-12').addEventListener('click', () => {
@@ -207,7 +212,10 @@ let arr_13 = [10, 20, 30, 40];
 let res_13 = 0;
 
 const t13 = () => {
-
+    res_13 = 0;
+    arr_13.forEach(elem => {
+        res_13 += elem;
+    })
 };
 
 document.querySelector('.b-13').addEventListener('click', () => {
@@ -224,9 +232,11 @@ let res_14 = [];
 
 const t14 = () => {
     res_14 = [];
-    for (let i = 0; i < arr_14.length; i += 2) {
-        res_14.push(arr_14.at(i));
-    }
+    arr_14.forEach((elem, i) => {
+        if (i % 2 === 0) {
+            res_14.push(elem);
+        }
+    })
 };
 
 document.querySelector('.b-14').addEventListener('click', () => {

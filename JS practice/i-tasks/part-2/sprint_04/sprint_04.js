@@ -268,9 +268,18 @@ document.querySelector('.b-12').addEventListener('click', t12);
 // Функция должна рисовать такую фигуру
 // и выводить в .out-13
 
-
+const out13 = document.querySelector('.out-13');
 const t13 = () => {
-
+    let str = '';
+    for (let i = 1; i < 5; i++) {
+        let count = 10 * i;
+        let k = count - 10;
+        for (; k <= count; k++) {
+            str += `${k}_`;
+        }
+        str += '</br>';
+    }
+    out13.innerHTML = str;
 };
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -280,9 +289,23 @@ document.querySelector('.b-13').addEventListener('click', t13);
 // Функция должна рисовать такую фигуру
 // и выводить в .out-14
 
-
+const out14 = document.querySelector('.out-14');
 const t14 = () => {
-
+    let str = '';
+    for (let i = 1; i < 5; i++) {
+        let count = 10 * i;
+        let k = count - 10;
+        for (; k <= count; k++) {
+            if (k < 10) {
+                str += `0${k}_`;
+            }
+            else {
+                str += `${k}_`;
+            }
+        }
+        str += '</br>';
+    }
+    out14.innerHTML = str;
 };
 
 document.querySelector('.b-14').addEventListener('click', t14);
@@ -290,10 +313,17 @@ document.querySelector('.b-14').addEventListener('click', t14);
 // Task 15
 // Функция должна рисовать такую фигуру
 // и выводить в .out-15
-
+const out15 = document.querySelector('.out-15');
 
 const t15 = () => {
-
+    let str = '';
+    for (let i = 1; i < 5; i++) {
+        for (let k = 0; k < i; k++) {
+            str += `${k + 1}_`;
+        }
+        str += '</br>';
+    }
+    out15.innerHTML = str;
 };
 
 document.querySelector('.b-15').addEventListener('click', t15);

@@ -332,10 +332,17 @@ document.querySelector('.b-15').addEventListener('click', t15);
 // Task 16
 // Функция должна рисовать такую фигуру
 // и выводить в .out-16
-
+const out16 = document.querySelector('.out-16');
 
 const t16 = () => {
-
+    let str = '';
+    for (let i = 1; i < 5; i++) {
+        for (let k = 0; k < i; k++) {
+            str += `${i}_`;
+        }
+        str += '<br>';
+    }
+    out16.innerHTML = str;
 };
 
 document.querySelector('.b-16').addEventListener('click', t16);

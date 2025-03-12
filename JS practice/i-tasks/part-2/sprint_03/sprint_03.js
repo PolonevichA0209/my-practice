@@ -90,15 +90,12 @@ document.querySelector('.b-5').addEventListener('click', () => {
 // Функция должна принимать два массива и проверять, что входящие в них элементы равны. Под равенством понимается сравнение по типу (строгое), по значению, и по положению в массиве. Функция должна возвращать true/false.
 
 const t06 = (arr1, arr2) => {
-    let res = false;
-    arr1.map((item, index) => {
-        if (item === arr2[index]) {
-            res = true;
-        } else {
-            res = false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
         }
-    })
-    return res;
+    }
+    return true;
 };
 
 document.querySelector('.b-6').addEventListener('click', () => {
